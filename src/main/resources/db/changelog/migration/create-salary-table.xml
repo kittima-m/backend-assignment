@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Create the 'salary' table -->
+    <changeSet id="create-salary-table" author="kittima-meesrisong">
+        <createTable tableName="salary">
+            <column name="id" type="LONG" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="employer_name" type="VARCHAR(100)" />
+            <column name="location" type="VARCHAR(255)" />
+            <column name="job_title" type="VARCHAR(255)" />
+            <column name="years_at_employer" type="DECIMAL(40,2)" />
+            <column name="years_of_experience" type="DECIMAL(40,2)" />
+            <column name="salary" type="DECIMAL(40,2)" />
+            <column name="signing_bonus" type="DECIMAL(40,2)" />
+            <column name="annual_bonus" type="DECIMAL(40,2)" />
+            <column name="annual_stock_value" type="DECIMAL(40,2)" />
+            <column name="gender" type="VARCHAR(255)" />
+            <column name="additional_comments" type="MEDIUMTEXT" />
+            <column name="timestamp" type="TIMESTAMP" />
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
